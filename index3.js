@@ -82,11 +82,27 @@ let totalSum=arr7.reduce((accumulator, currentVal)=> accumulator + currentVal,0)
 console.log('totalSum : '+ totalSum);
 
 
+arr7["daalo"]=17;
+// arr7.daalo=17;
+console.log(arr7);
 
+for(let key in arr7){
+    console.log(key,arr7[key]);
+}
 
-
-
-
-
+let ladki={
+     aankh:2,
+     naak:1
+};
+ladki.haath=2;
+for(let key in ladki){
+    console.log(key,ladki[key]);
+}
+let a=3;
+let b='9';
+console.log(a+b);      //10
+console.log(3 + 4 +'2'+ 7 + 3)   //7273
+console.log(3 - '-2');   //5
+console.log(5 / '2');    //2.5
 
 
