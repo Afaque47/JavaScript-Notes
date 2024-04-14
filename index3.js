@@ -30,6 +30,7 @@ function abc(...args){
     return total;
 }
 console.log(abc(1,2,3,4,5,6,7,8,9,10));
+
 //getter setter
 let person={
     fName:'Afaque',
@@ -100,7 +101,7 @@ for(let key in ladki){
 }
 let a=3;
 let b='9';
-console.log(a+b);      //10
+console.log(a+b);      //39
 console.log(3 + 4 +'2'+ 7 + 3)   //7273
 console.log(3 - '-2');   //5
 console.log(5 / '2');    //2.5

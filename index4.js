@@ -1,9 +1,9 @@
 var arr = [ 1 , 2 , [ 3 , 4 ],"codingBro"] ;
-// console.log(arr[2][1]) ; //  return 3
-// console.log(arr[5])  ;     // return undefined
-// console.log(arr[-1])  ;   //return undefined
-// arr.unshift(-2,-1,0);
-// console.log(arr);
+console.log(arr[2][1]) ; //  return 4
+console.log(arr[5])  ;     // return undefined
+console.log(arr[-1])  ;   //return undefined
+arr.unshift(-2,-1,0);
+console.log(arr);
 console.log("===========================================================>");
 //toString()
 let toStr=arr.toString()
@@ -54,6 +54,8 @@ function myGeeks() {
     let strExt = str.replace(str.match(/\d+/g),"");
 
 	console.log(matches);
+    console.log(strExt);
+    console.log(typeof(matches));
     let value = Number(matches[0])  +  Number(matches[1])  +  Number(matches[2]);
     console.log(typeof(value));
     console.log(value);

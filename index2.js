@@ -17,6 +17,7 @@ console.log(lastName.length);
 let str="This is my first message";
 let s=str.split(' ');
 console.log(s);
+console.log(typeof(s));
 let jaise=`  This is
   ${lastName}
 2nd mesaage.`;
