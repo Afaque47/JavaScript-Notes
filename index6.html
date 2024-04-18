@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color:thistle;
+           
+            
+        }
+        .tableContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            width: 60%;
+            height: 100%;
+            margin: 0 auto;
+            padding-top: 3rem;
+            background-color: bisque;
+        }
+        form{
+            display: flex;
+            justify-content:space-evenly;
+            align-items: start;
+        }
+        label{
+            font-size:1.5rem;
+        }
+        #tableId{
+            width:15rem;
+            height:1.5rem
+            
+        }
+        #submit{
+            width: 5rem;
+            height: 1.5rem;
+        }
+ 
+
+    </style>
+</head>
+<body>
+  
+    <div class="container">
+        <div class="tableContainer">
+            <form action="">
+                <label for="tableId">Table of :</label>
+                <input type="number" name="tableNumber" id="tableId" min="0" placeholder="Enter a Number" onblur="tblget()">
+                <input type="submit" value="Enter" id="submit" onclick="tblget(); return false" >
+                <textarea name="" id="tblpk" cols="10" rows="11"></textarea>
+                
+                
+            </form>
+            <form action="">
+                
+                <input type="number" name="1st" id="frstnbr" min="0"  placeholder="Enter 1st number" onblur="calcMe()">
+                 <select name="" id="expr">
+                    <option >+</option>
+                    <option >-</option>
+                    <option >*</option>
+                    <option >/</option>
+                </select>
+                <input type="number" name="2nd" id="scndnbr" min="0" placeholder="Enter 2nd number" onblur="calcMe()">
+                
+                <input type="submit" onclick="calcMe(); return false">
+                <input id="answer" type="number">
+
+
+            </form>
+    
+            
+        </div>
+    </div>
+    <script>
+       
+       function tblget()
+       {
+
+        let k = document.getElementById("tableId").value;
+        let sum='';
+        for(let i=1;i<=10;i++){ 
+            
+           sum += k*i + '\n';
+        }
+        document.getElementById("tblpk").value = sum; 
+       
+     }
+       
+     function calcMe(){
+        let a=parseInt(document.getElementById("frstnbr").value);
+        let b=parseInt(document.getElementById("scndnbr").value);
+        let exp=document.getElementById("expr").value;
+        let sum;
+        switch(exp){
+            case '-' : sum=a-b; break;
+            case '+' : sum=a+b; break;
+            case '*' : sum=a*b; break;
+            case '/' : sum=a/b; break;
+            
+        }
+        
+        document.getElementById("answer").value=sum;
+       
+
+        
+     }
+    </script>
+    
+</body>
+</html>
