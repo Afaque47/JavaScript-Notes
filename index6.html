@@ -13,7 +13,7 @@
         }
         .container{
             width: 100%;
-            height: 100vh;
+            height: 100%;
             background-color:thistle;
            
             
@@ -45,14 +45,28 @@
             width: 5rem;
             height: 1.5rem;
         }
- 
+        .learn{
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+        }
+        .uldata{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+      
 
     </style>
 </head>
 <body>
   
     <div class="container">
+        
         <div class="tableContainer">
+            <svg class="ns-extu8-e-3 image" viewBox="0 0 1920 1005"></svg>
             <form action="">
                 <label for="tableId">Table of :</label>
                 <input type="number" name="tableNumber" id="tableId" min="0" placeholder="Enter a Number" onblur="tblget()">
@@ -62,6 +76,7 @@
                 
             </form>
             <form action="">
+
                 
                 <input type="number" name="1st" id="frstnbr" min="0"  placeholder="Enter 1st number" onblur="calcMe()">
                  <select name="" id="expr">
@@ -74,9 +89,34 @@
                 
                 <input type="submit" onclick="calcMe(); return false">
                 <input id="answer" type="number">
-
-
             </form>
+            <div class="learn">
+                <h2>Welcome To GeeksforGeeks Learning</h2>
+                <div class="uldata">
+                    <h4>List of available courses</h4>
+                <ul id="uol">
+                    <li>Data Structures & Algorithm</li>
+                    <li>Web Development</li>
+                    <li>Aptitude & Logical Resaoning</li>
+                    <li>Programming Languages</li>
+                </ul>
+                </div>
+                <div class="oldata">
+                    <h4>Data Structures Topics</h4>
+                <ol id="olh">
+                    <li>Array</li>
+                    <li>Linked List</li>
+                    <li>Stacks</li>
+                    <li>Queues</li>
+                    <li>Trees</li>
+                    <li>Graphs</li>
+                </ol>
+
+                </div>
+                
+                
+            </div>
+            
     
             
         </div>
